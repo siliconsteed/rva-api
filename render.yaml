@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: rva-api
+    env: node
+    plan: free
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: NODE_VERSION
+        value: 24.4.1  # Or your preferred Node.js version
+    autoDeploy: true
+    branch: master
